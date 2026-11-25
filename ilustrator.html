@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diseños en Illustrator · Israel Guancha</title>
+  <!-- Tipografía limpia estilo editorial -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Hoja de estilos de la página Illustrator -->
+  <link rel="stylesheet" href="ilustrator.css">
+</head>
+<body id="top">
+
+  <!-- ==================== HEADER / NAVEGACIÓN ==================== -->
+  <header class="header">
+    <div class="container header__contenido">
+      <a href="index.html" class="marca">
+        <!-- Espacio reservado para insertar tu logo -->
+        <div class="marca__logo-contenedor">
+          <img src="imagenes/logo_israel.png" alt="Logo Israel Guancha" class="marca__logo-img">
+        </div>
+        <span class="marca__nombre">ISRAEL GUANCHA</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <ul class="nav__lista">
+          <li class="nav__item">
+            <a href="index.html" class="nav__enlace">Inicio</a>
+          </li>
+          <li class="nav__item">
+            <a href="portafolio.html" class="nav__enlace nav__enlace--activo">Portafolio</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#sobre-mi" class="nav__enlace">Sobre mí</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#contacto" class="nav__enlace">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== RUTA / MIGAS DE PAN ==================== -->
+  <nav class="breadcrumb" aria-label="Ruta de navegación">
+    <div class="container">
+      <ol class="breadcrumb__lista">
+        <li class="breadcrumb__item">
+          <a href="index.html" class="breadcrumb__enlace">Inicio</a>
+        </li>
+        <li class="breadcrumb__separador" aria-hidden="true">/</li>
+        <li class="breadcrumb__item">
+          <a href="portafolio.html" class="breadcrumb__enlace">Portafolio</a>
+        </li>
+        <li class="breadcrumb__separador" aria-hidden="true">/</li>
+        <li class="breadcrumb__item breadcrumb__item--actual" aria-current="page">
+          Illustrator
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ==================== HERO DE ESPECIALIDAD ==================== -->
+    <section class="seccion especialidad-hero">
+      <div class="container especialidad-hero__grid">
+        <div class="especialidad-hero__info">
+          <p class="etiqueta">01 / ESPECIALIDAD</p>
+          <h1 class="especialidad-hero__titulo">
+            Diseños en<br>
+            Illustrator
+          </h1>
+          <p class="especialidad-hero__descripcion">
+            Logotipos, ilustraciones y recursos gráficos con identidad.
+          </p>
+
+          <a href="#proyectos-illustrator" class="btn btn--secundario">
+            Ver proyectos <span class="flecha flecha--abajo">↓</span>
+          </a>
+        </div>
+
+        <div class="especialidad-hero__visual">
+  <div class="marco-imagen marco-imagen--especialidad">
+    <video
+      class="marco-imagen__video"
+      src="videos/motion_graphic_ilustrator.mp4"
+      autoplay
+      loop
+      muted
+      playsinline
+      controls
+    ></video>
+  </div>
+</div>
+      </div>
+    </section>
+
+    <!-- ==================== PROYECTOS DE ILLUSTRATOR ==================== -->
+    <section id="proyectos-illustrator" class="seccion proyectos-ai">
+      <div class="container">
+        <div class="proyectos-ai__cabecera">
+          <h2 class="titulo-seccion">Proyectos de Illustrator</h2>
+          <span class="proyectos-ai__contador">03 / PROYECTOS DE MUESTRA</span>
+        </div>
+
+        <div class="proyectos-grid">
+
+          <!-- Proyecto 01 -->
+          <article class="proyecto-card">
+            <a href="docs/logotipos.pdf" target="_blank" rel="noopener noreferrer" class="proyecto-card__enlace">
+              <div class="marco-imagen marco-imagen--cuadrado">
+                <span class="marco-imagen__numero">01</span>
+                <img
+                  src="imagenes/portada_logotipos.png"
+                  alt="Vista previa de proyectos de identidad y logotipos"
+                  class="marco-imagen__img"
+                >
+              </div>
+              <h3 class="proyecto-card__titulo">
+                Identidad y logotipos <span class="flecha flecha--diagonal">↗</span>
+              </h3>
+              <p class="proyecto-card__meta">Identidad visual</p>
+            </a>
+          </article>
+
+          <!-- Proyecto 02 -->
+          <article class="proyecto-card">
+            <a href="docs/ilustracion_personajes.pdf" target="_blank" rel="noopener noreferrer" class="proyecto-card__enlace">
+              <div class="marco-imagen marco-imagen--cuadrado">
+                <span class="marco-imagen__numero">02</span>
+                <img
+                  src="imagenes/Portada_Personajes.png"
+                  alt="Vista previa de ilustración de personajes en Illustrator"
+                  class="marco-imagen__img"
+                >
+              </div>
+              <h3 class="proyecto-card__titulo">
+                Ilustración de personajes <span class="flecha flecha--diagonal">↗</span>
+              </h3>
+              <p class="proyecto-card__meta">Ilustración vectorial</p>
+            </a>
+          </article>
+
+          <!-- Proyecto 03 -->
+          <article class="proyecto-card">
+            <a href="docs/manuales.pdf" target="_blank" rel="noopener noreferrer" class="proyecto-card__enlace">
+              <div class="marco-imagen marco-imagen--cuadrado">
+                <span class="marco-imagen__numero">03</span>
+                <img
+                  src="imagenes/portada_manuales.png"
+                  alt="Vista previa de manual de marca"
+                  class="marco-imagen__img"
+                >
+              </div>
+              <h3 class="proyecto-card__titulo">
+                Manual de marca <span class="flecha flecha--diagonal">↗</span>
+              </h3>
+              <p class="proyecto-card__meta">Sistema gráfico</p>
+            </a>
+          </article>
+
+        </div>
+
+        <p class="proyectos-ai__nota">
+          Proyectos de muestra · Sustituir por trabajos reales en la siguiente etapa.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== PROCESO CREATIVO ==================== -->
+    <section class="seccion proceso">
+      <div class="container">
+        <p class="etiqueta">DEL CONCEPTO AL RESULTADO</p>
+        <h2 class="titulo-seccion proceso__titulo">
+          Del concepto a una identidad visual coherente.
+        </h2>
+
+        <div class="proceso-grid">
+          <article class="proceso-item">
+            <h3 class="proceso-item__titulo">01 / Concepto</h3>
+            <p class="proceso-item__desc">
+              Entender la idea y explorar referentes visuales.
+            </p>
+          </article>
+
+          <article class="proceso-item">
+            <h3 class="proceso-item__titulo">02 / Exploración</h3>
+            <p class="proceso-item__desc">
+              Desarrollar bocetos, formas y composiciones.
+            </p>
+          </article>
+
+          <article class="proceso-item">
+            <h3 class="proceso-item__titulo">03 / Sistema visual</h3>
+            <p class="proceso-item__desc">
+              Refinar las piezas y preparar sus aplicaciones.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== LLAMADO A LA ACCIÓN (CTA) ==================== -->
+    <section class="seccion cta">
+      <div class="container cta__contenido">
+        <div class="cta__texto-grupo">
+          <h2 class="cta__titulo">¿Tienes un proyecto en mente?</h2>
+          <p class="cta__subtitulo">Conversemos y demos forma a tu próxima idea.</p>
+        </div>
+
+        <a href="index.html#contacto" class="btn btn--cta">
+          Hablemos <span class="flecha flecha--diagonal">↗</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer__contenido">
+      <p class="footer__firma">
+        <strong>ISRAEL GUANCHA</strong> · Diseño y comunicación visual
+      </p>
+
+      <div class="footer__enlaces">
+         <a href="https://www.behance.net/anubcripdeid" class="footer__enlace" target="_blank" rel="noopener noreferrer">
+         Behance <span class="flecha flecha--diagonal">↗</span>
+         </a>
+         <a href="https://www.instagram.com/_isrx_g7/" class="footer__enlace" target="_blank" rel="noopener noreferrer">
+         Instagram <span class="flecha flecha--diagonal">↗</span>
+         </a>
+        <a href="#top" class="footer__enlace">
+          Volver arriba <span class="flecha flecha--arriba">↑</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

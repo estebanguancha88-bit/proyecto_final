@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diseños para Multimedia · Israel Guancha</title>
+  <!-- Tipografía limpia estilo editorial -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Hoja de estilos de la página Multimedia -->
+  <link rel="stylesheet" href="multimedia.css">
+</head>
+<body id="top">
+
+  <!-- ==================== HEADER / NAVEGACIÓN ==================== -->
+  <header class="header">
+    <div class="container header__contenido">
+      <a href="index.html" class="marca">
+        <!-- Espacio reservado para tu logotipo -->
+        <div class="marca__logo-contenedor">
+          <img src="imagenes/logo_israel.png" alt="Logo Israel Guancha" class="marca__logo-img">
+        </div>
+        <span class="marca__nombre">ISRAEL GUANCHA</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <ul class="nav__lista">
+          <li class="nav__item">
+            <a href="index.html" class="nav__enlace">Inicio</a>
+          </li>
+          <li class="nav__item">
+            <a href="portafolio.html" class="nav__enlace nav__enlace--activo">Portafolio</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#sobre-mi" class="nav__enlace">Sobre mí</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#contacto" class="nav__enlace">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== RUTA / MIGAS DE PAN ==================== -->
+  <nav class="breadcrumb" aria-label="Ruta de navegación">
+    <div class="container">
+      <ol class="breadcrumb__lista">
+        <li class="breadcrumb__item">
+          <a href="index.html" class="breadcrumb__enlace">Inicio</a>
+        </li>
+        <li class="breadcrumb__separador" aria-hidden="true">/</li>
+        <li class="breadcrumb__item">
+          <a href="portafolio.html" class="breadcrumb__enlace">Portafolio</a>
+        </li>
+        <li class="breadcrumb__separador" aria-hidden="true">/</li>
+        <li class="breadcrumb__item breadcrumb__item--actual" aria-current="page">
+          Multimedia
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ==================== HERO DE ESPECIALIDAD ==================== -->
+    <section class="seccion especialidad-hero">
+      <div class="container especialidad-hero__grid">
+        <div class="especialidad-hero__info">
+          <p class="etiqueta">03 / ESPECIALIDAD</p>
+          <h1 class="especialidad-hero__titulo">
+            Diseños para<br>
+            Multimedia
+          </h1>
+          <p class="especialidad-hero__descripcion">
+            Animación, motion graphics, edición y contenido audiovisual.
+          </p>
+
+          <a href="#proyectos-multimedia" class="btn btn--secundario">
+            Ver proyectos <span class="flecha flecha--abajo">↓</span>
+          </a>
+        </div>
+
+        <!-- Bloque principal exclusivamente con video en bucle -->
+        <div class="especialidad-hero__visual">
+          <div class="marco-video marco-video--especialidad">
+            <video
+              class="marco-video__reproductor marco-video__reproductor--bucle"
+              src="videos/motion_multimedia.mp4"
+              autoplay
+              loop
+              muted
+              playsinline
+              disablepictureinpicture
+            >
+              Tu navegador no soporta la reproducción de video.
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROYECTOS DE MULTIMEDIA ==================== -->
+    <section id="proyectos-multimedia" class="seccion proyectos-pr">
+      <div class="container">
+        <div class="proyectos-pr__cabecera">
+          <h2 class="titulo-seccion">Proyectos de Multimedia</h2>
+          <span class="proyectos-pr__contador">03 / PROYECTOS DE MUESTRA</span>
+        </div>
+
+        <div class="proyectos-grid">
+
+          <!-- Proyecto 01: Video con controles -->
+          <article class="proyecto-card">
+            <div class="marco-video marco-video--proyecto">
+              <span class="marco-video__numero">01</span>
+              <video
+                class="marco-video__reproductor"
+                src="videos/aurora_Razfuhei.mp4"
+                poster="imagenes/¿Amenaza o cortejo_ Mantis y ave.png"
+                controls
+                preload="metadata"
+                playsinline
+              >
+                Tu navegador no soporta la reproducción de video.
+              </video>
+            </div>
+            <a href="videos/aurora_Razfuhei.mp4" target="_blank" rel="noopener noreferrer" class="proyecto-card__enlace">
+              <h3 class="proyecto-card__titulo">
+                Storytelling Aurora <span class="flecha flecha--diagonal">↗</span>
+              </h3>
+              <p class="proyecto-card__meta">Video · Producción audiovisual</p>
+            </a>
+          </article>
+
+          <!-- Proyecto 02: Video con controles -->
+          <article class="proyecto-card">
+            <div class="marco-video marco-video--proyecto">
+              <span class="marco-video__numero">02</span>
+              <video
+                class="marco-video__reproductor"
+                src="videos/campana-de-salud_AvVqX3Ty.mp4"
+                poster="imagenes/campaña_salud.png"
+                controls
+                preload="metadata"
+                playsinline
+              >
+                Tu navegador no soporta la reproducción de video.
+              </video>
+            </div>
+            <a href="videos/campana-de-salud_AvVqX3Ty.mp4" target="_blank" rel="noopener noreferrer" class="proyecto-card__enlace">
+              <h3 class="proyecto-card__titulo">
+                Video de YouTube <span class="flecha flecha--diagonal">↗</span>
+              </h3>
+              <p class="proyecto-card__meta">Video · Camapaña de Salud</p>
+            </a>
+          </article>
+
+          <!-- Proyecto 03: Video con controles -->
+         
+<article class="proyecto-card">
+  <div class="marco-video marco-video--proyecto">
+    <span class="marco-video__numero">03</span>
+    <video
+      class="marco-video__reproductor marco-video__reproductor--click"
+      src="videos/el-pacto-de-las-sombras_qxwjCJXN.mp4"
+      poster="imagenes/El pacto de las sombras.png"
+      controls
+      preload="none"
+      playsinline
+    >
+      Tu navegador no soporta la reproducción de video.
+    </video>
+  </div>
+  <a href="videos/el-pacto-de-las-sombras_qxwjCJXN.mp4" target="_blank" rel="noopener noreferrer" class="proyecto-card__enlace">
+    <h3 class="proyecto-card__titulo">
+      Edición y narrativa sonora <span class="flecha flecha--diagonal">↗</span>
+    </h3>
+    <p class="proyecto-card__meta">Cortometraje · Clay</p>
+  </a>
+</article>
+
+        </div>
+
+        <p class="proyectos-pr__nota">
+          Proyectos de muestra · Sustituir por trabajos reales en la siguiente etapa.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== PROCESO AUDIOVISUAL ==================== -->
+    <section class="seccion proceso">
+      <div class="container">
+        <p class="etiqueta">DEL CONCEPTO AL RESULTADO</p>
+        <h2 class="titulo-seccion proceso__titulo">
+          Imagen, ritmo y sonido al servicio de una idea.
+        </h2>
+
+        <div class="proceso-grid">
+          <article class="proceso-item">
+            <h3 class="proceso-item__titulo">01 / Narrativa</h3>
+            <p class="proceso-item__desc">
+              Definir la idea, el guion y la intención del proyecto.
+            </p>
+          </article>
+
+          <article class="proceso-item">
+            <h3 class="proceso-item__titulo">02 / Producción</h3>
+            <p class="proceso-item__desc">
+              Crear y organizar los recursos visuales y sonoros.
+            </p>
+          </article>
+
+          <article class="proceso-item">
+            <h3 class="proceso-item__titulo">03 / Posproducción</h3>
+            <p class="proceso-item__desc">
+              Integrar edición, movimiento y sonido.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== LLAMADO A LA ACCIÓN (CTA) ==================== -->
+    <section class="seccion cta">
+      <div class="container cta__contenido">
+        <div class="cta__texto-grupo">
+          <h2 class="cta__titulo">¿Tienes un proyecto en mente?</h2>
+          <p class="cta__subtitulo">Conversemos y demos forma a tu próxima idea.</p>
+        </div>
+
+        <a href="index.html#contacto" class="btn btn--cta">
+          Hablemos <span class="flecha flecha--diagonal">↗</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer__contenido">
+      <p class="footer__firma">
+        <strong>ISRAEL GUANCHA</strong> · Diseño y comunicación visual
+      </p>
+
+      <div class="footer__enlaces">
+        <a href="https://www.behance.net/anubcripdeid" class="footer__enlace" target="_blank" rel="noopener noreferrer">
+         Behance <span class="flecha flecha--diagonal">↗</span>
+         </a>
+         <a href="https://www.instagram.com/_isrx_g7/" class="footer__enlace" target="_blank" rel="noopener noreferrer">
+         Instagram <span class="flecha flecha--diagonal">↗</span>
+         </a>
+        <a href="#top" class="footer__enlace">
+          Volver arriba <span class="flecha flecha--arriba">↑</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

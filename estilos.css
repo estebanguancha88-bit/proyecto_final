@@ -1,0 +1,750 @@
+/* ==================== VARIABLES Y RESET ==================== */
+:root {
+  --bg-negro: #000000;
+  --bg-hero: #111111;
+  --bg-portafolio: #050505;
+  --bg-sobre-mi: #1f1f1f;
+  --bg-contacto: #161616;
+  --bg-placeholder: #424242;
+  --bg-btn-primario: #202020;
+
+  --texto-principal: #ffffff;
+  --texto-secundario: #c7c7c7;
+  --texto-tenue: #9a9a9a;
+
+  --borde-seccion: rgba(255, 255, 255, 0.35);
+  --borde-suave: rgba(255, 255, 255, 0.2);
+  --borde-input: rgba(255, 255, 255, 0.55);
+  --borde-activo: #ffffff;
+
+  /* Colores oficiales de Adobe (cambia aquí el código hexadecimal cuando quieras) */
+  --color-illustrator: #FF9A00;
+  --color-indesign: #FF3366;
+  --color-premiere: #9999FF;
+
+  --transicion: 0.25s ease;
+  --ancho-maximo: 1200px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-negro);
+  color: var(--texto-principal);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ==================== UTILIDADES GENERALES ==================== */
+.container {
+  width: 90%;
+  max-width: var(--ancho-maximo);
+  margin: 0 auto;
+}
+
+.seccion {
+  border-bottom: 1px solid var(--borde-seccion);
+}
+
+.etiqueta {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--texto-secundario);
+  margin-bottom: 1.25rem;
+}
+
+.titulo-seccion {
+  font-size: clamp(1.75rem, 3vw, 2.3rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.flecha {
+  display: inline-block;
+  margin-left: 0.25rem;
+  transition: transform var(--transicion), color var(--transicion);
+}
+
+/* Accesibilidad al navegar con teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--texto-principal);
+  outline-offset: 3px;
+}
+
+/* ==================== HEADER ==================== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--bg-negro);
+  border-bottom: 1px solid var(--borde-seccion);
+}
+
+.header__contenido {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 76px;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+/* Contenedor cuadrado para insertar tu logo futuro */
+.marca__logo-contenedor {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--texto-principal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 4px;
+  transition: transform var(--transicion), background-color var(--transicion);
+}
+
+.marca__logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  font-size: 0.6rem;
+  color: var(--texto-tenue);
+  text-align: center;
+}
+
+.marca__nombre {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  transition: opacity var(--transicion);
+}
+
+/* Pseudoclases interactivas en la marca */
+.marca:hover .marca__logo-contenedor {
+  transform: scale(1.06);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.marca:hover .marca__nombre {
+  opacity: 0.8;
+}
+
+.nav__lista {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+}
+
+.nav__enlace {
+  position: relative;
+  font-size: 0.85rem;
+  color: var(--texto-secundario);
+  padding-bottom: 4px;
+  transition: color var(--transicion);
+}
+
+.nav__enlace::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--texto-principal);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transicion);
+}
+
+.nav__enlace--activo {
+  color: var(--texto-principal);
+  font-weight: 500;
+}
+
+.nav__enlace--activo::after {
+  transform: scaleX(1);
+}
+
+.nav__enlace:not(.nav__enlace--activo):hover {
+  color: var(--texto-principal);
+}
+
+.nav__enlace:not(.nav__enlace--activo):hover::after {
+  transform: scaleX(1);
+}
+
+/* ==================== HERO ==================== */
+.hero {
+  background-color: var(--bg-hero);
+  padding: 4.5rem 0 5.5rem;
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.hero__titulo {
+  font-size: clamp(3rem, 6vw, 4.75rem);
+  font-weight: 700;
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.hero__rol {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--texto-principal);
+  margin-bottom: 1.15rem;
+}
+
+.hero__descripcion {
+  font-size: 1.15rem;
+  color: var(--texto-secundario);
+  max-width: 400px;
+  line-height: 1.45;
+  margin-bottom: 2rem;
+}
+
+.hero__acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-bottom: 1.75rem;
+}
+
+.hero__disciplinas {
+  font-size: 0.72rem;
+  color: var(--texto-tenue);
+}
+
+/* ==================== BOTONES ==================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.85rem 1.45rem;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--texto-principal);
+  border: 1px solid var(--borde-input);
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color var(--transicion),
+              color var(--transicion),
+              border-color var(--transicion),
+              transform 0.15s ease;
+}
+
+.btn--primario {
+  background-color: var(--bg-btn-primario);
+}
+
+.btn--secundario {
+  background-color: transparent;
+}
+
+.btn--enviar {
+  background-color: transparent;
+  margin-top: 0.4rem;
+}
+
+/* Pseudoclases interactivas en botones */
+.btn:hover {
+  background-color: var(--texto-principal);
+  color: var(--bg-negro);
+  border-color: var(--texto-principal);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn:hover .flecha--diagonal {
+  transform: translate(3px, -3px);
+}
+
+.btn:hover .flecha--abajo {
+  transform: translateY(3px);
+}
+
+/* ==================== MARCOS DE IMAGEN (PLACEHOLDERS) ==================== */
+.marco-imagen {
+  background-color: var(--bg-placeholder);
+  padding: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid transparent;
+  transition: border-color var(--transicion), background-color var(--transicion), transform var(--transicion);
+}
+
+.marco-imagen--retrato {
+  height: 430px;
+  padding: 0;
+}
+
+.marco-imagen__foto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform var(--transicion);
+}
+
+.hero__visual .marco-imagen:hover .marco-imagen__foto {
+  transform: scale(1.03);
+}
+
+.marco-imagen--proyecto {
+  aspect-ratio: 16 / 10;
+  margin-bottom: 1rem;
+  padding: 0;
+  background-color: #141414;
+}
+
+.marco-imagen__numero {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--texto-principal);
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 0.25rem 0.5rem;
+}
+
+.marco-imagen__proyecto-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transicion);
+}
+
+/* Clase opcional para portadas verticales sin recorte */
+.marco-imagen__proyecto-img--completa {
+  object-fit: contain;
+}
+
+.proyecto-card__enlace:hover .marco-imagen__proyecto-img {
+  transform: scale(1.04);
+}
+
+.marco-imagen__top {
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--texto-principal);
+}
+
+.marco-imagen__centro {
+  font-size: 0.82rem;
+  color: #d6d6d6;
+  text-align: center;
+  margin: auto 0;
+}
+
+.marco-imagen__bottom {
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--texto-principal);
+}
+
+.hero__visual .marco-imagen:hover {
+  border-color: var(--borde-input);
+  background-color: #4a4a4a;
+}
+
+/* ==================== PORTAFOLIO ==================== */
+.portafolio {
+  background-color: var(--bg-portafolio);
+  padding: 5.5rem 0;
+}
+
+.portafolio__cabecera {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.enlace-flecha {
+  font-size: 0.82rem;
+  color: var(--texto-principal);
+  transition: opacity var(--transicion);
+}
+
+.enlace-flecha:hover {
+  opacity: 0.75;
+}
+
+.enlace-flecha:hover .flecha--diagonal {
+  transform: translate(3px, -3px);
+}
+
+.proyectos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.proyecto-card__enlace {
+  display: block;
+}
+
+.proyecto-card__titulo {
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  transition: color var(--transicion);
+}
+
+.proyecto-card__meta {
+  font-size: 0.78rem;
+  color: var(--texto-tenue);
+}
+
+/* Pseudoclases interactivas en tarjetas de proyecto */
+.proyecto-card__enlace:hover .marco-imagen--proyecto {
+  border-color: var(--texto-principal);
+  background-color: #4d4d4d;
+  transform: translateY(-4px);
+}
+
+.proyecto-card__enlace:hover .proyecto-card__titulo {
+  color: var(--texto-secundario);
+}
+
+/* Categorías inferiores */
+.categorias-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.categoria-item {
+  display: block;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--borde-suave);
+  transition: border-color var(--transicion), transform var(--transicion);
+}
+
+.categoria-item__titulo {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 0.45rem;
+  transition: filter var(--transicion), color var(--transicion);
+}
+
+.categoria-item__desc {
+  font-size: 0.78rem;
+  color: var(--texto-tenue);
+  transition: color var(--transicion);
+}
+
+.categoria-item:hover {
+  transform: translateY(-2px);
+}
+
+.categoria-item:hover .categoria-item__desc {
+  color: var(--texto-secundario);
+}
+
+.categoria-item:hover .flecha--diagonal {
+  transform: translate(3px, -3px);
+}
+
+/* Colores Adobe aplicados al número, palabra y flecha completos */
+.categoria-item:nth-child(1) .categoria-item__titulo,
+.categoria-item--ai .categoria-item__titulo {
+  color: var(--color-illustrator);
+}
+
+.categoria-item:nth-child(2) .categoria-item__titulo,
+.categoria-item--id .categoria-item__titulo {
+  color: var(--color-indesign);
+}
+
+.categoria-item:nth-child(3) .categoria-item__titulo,
+.categoria-item--pr .categoria-item__titulo {
+  color: var(--color-premiere);
+}
+
+/* Interactividad por programa al pasar el cursor (:hover) */
+.categoria-item:nth-child(1):hover,
+.categoria-item--ai:hover {
+  border-top-color: var(--color-illustrator);
+}
+
+.categoria-item:nth-child(2):hover,
+.categoria-item--id:hover {
+  border-top-color: var(--color-indesign);
+}
+
+.categoria-item:nth-child(3):hover,
+.categoria-item--pr:hover {
+  border-top-color: var(--color-premiere);
+}
+
+.categoria-item:hover .categoria-item__titulo {
+  filter: brightness(1.15);
+}
+
+/* ==================== SOBRE MÍ ==================== */
+.sobre-mi {
+  background-color: var(--bg-sobre-mi);
+  padding: 5.5rem 0;
+}
+
+.sobre-mi__grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.35fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.sobre-mi__titulo {
+  font-size: clamp(1.85rem, 3.2vw, 2.5rem);
+  font-weight: 600;
+  line-height: 1.22;
+  letter-spacing: -0.02em;
+}
+
+.sobre-mi__destacado {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--texto-principal);
+  margin-bottom: 1.5rem;
+}
+
+.sobre-mi__texto {
+  font-size: 0.95rem;
+  color: var(--texto-secundario);
+  max-width: 600px;
+  line-height: 1.6;
+  margin-bottom: 1.75rem;
+}
+
+.sobre-mi__etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  color: var(--texto-secundario);
+}
+
+.sobre-mi__etiquetas .separador {
+  color: var(--texto-tenue);
+}
+
+/* ==================== CONTACTO ==================== */
+.contacto {
+  background-color: var(--bg-contacto);
+  padding: 5.5rem 0;
+}
+
+.contacto__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.contacto__titulo {
+  font-size: clamp(2.4rem, 4.5vw, 3.35rem);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.contacto__texto {
+  font-size: 0.95rem;
+  color: var(--texto-secundario);
+  max-width: 340px;
+  line-height: 1.5;
+}
+
+/* Formulario */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+
+.formulario__grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formulario__label {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--texto-principal);
+}
+
+.formulario__input {
+  width: 100%;
+  padding: 0.85rem 0.95rem;
+  font-family: inherit;
+  font-size: 0.88rem;
+  color: var(--texto-principal);
+  background-color: transparent;
+  border: 1px solid var(--borde-input);
+  border-radius: 0;
+  transition: border-color var(--transicion), background-color var(--transicion);
+}
+
+.formulario__textarea {
+  resize: vertical;
+  min-height: 115px;
+}
+
+.formulario__input::placeholder {
+  color: var(--texto-tenue);
+}
+
+/* Pseudoclases interactivas en los campos del formulario */
+.formulario__input:hover {
+  border-color: var(--texto-principal);
+}
+
+.formulario__input:focus {
+  outline: none;
+  border-color: var(--texto-principal);
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.formulario__input:valid:not(:placeholder-shown) {
+  border-color: #d4d4d4;
+}
+
+.formulario__nota {
+  font-size: 0.7rem;
+  color: var(--texto-tenue);
+  margin-top: -0.35rem;
+}
+
+/* ==================== FOOTER ==================== */
+.footer {
+  background-color: var(--bg-negro);
+  padding: 1.85rem 0;
+}
+
+.footer__contenido {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer__firma {
+  font-size: 0.78rem;
+  color: var(--texto-secundario);
+}
+
+.footer__firma strong {
+  color: var(--texto-principal);
+  font-weight: 600;
+}
+
+.footer__enlaces {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.footer__enlace {
+  font-size: 0.78rem;
+  color: var(--texto-secundario);
+  transition: color var(--transicion);
+}
+
+.footer__enlace:hover {
+  color: var(--texto-principal);
+}
+
+.footer__enlace:hover .flecha--diagonal {
+  transform: translate(3px, -3px);
+}
+
+.footer__enlace:hover .flecha--arriba {
+  transform: translateY(-3px);
+}
+
+/* ==================== DISEÑO RESPONSIVO ==================== */
+@media (max-width: 900px) {
+  .hero__grid,
+  .proyectos-grid,
+  .categorias-grid,
+  .sobre-mi__grid,
+  .contacto__grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .marco-imagen--retrato {
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 640px) {
+  .header__contenido {
+    flex-direction: column;
+    padding: 1rem 0;
+    gap: 0.85rem;
+  }
+
+  .nav__lista {
+    gap: 1.25rem;
+  }
+
+  .portafolio__cabecera {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

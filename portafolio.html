@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio · Israel Guancha</title>
+  <!-- Tipografía limpia estilo editorial -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Hoja de estilos de la página de portafolio -->
+  <link rel="stylesheet" href="portafolio.css">
+</head>
+<body id="top">
+
+  <!-- ==================== HEADER / NAVEGACIÓN ==================== -->
+  <header class="header">
+    <div class="container header__contenido">
+      <a href="index.html" class="marca">
+        <!-- Espacio reservado para insertar tu logo -->
+        <div class="marca__logo-contenedor">
+          <img src="imagenes/logo_israel.png" class="marca__logo-img">
+        </div>
+        <span class="marca__nombre">ISRAEL GUANCHA</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <ul class="nav__lista">
+          <li class="nav__item">
+            <a href="index.html" class="nav__enlace">Inicio</a>
+          </li>
+          <li class="nav__item">
+            <a href="portafolio.html" class="nav__enlace nav__enlace--activo">Portafolio</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#sobre-mi" class="nav__enlace">Sobre mí</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#contacto" class="nav__enlace">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ==================== CABECERA PORTAFOLIO ==================== -->
+    <section class="seccion portafolio-hero">
+      <div class="container">
+        <p class="etiqueta">PORTAFOLIO / SELECCIÓN DE TRABAJOS</p>
+
+        <div class="portafolio-hero__grid">
+          <h1 class="portafolio-hero__titulo">
+            Mis proyectos,<br>
+            mi pasión.
+          </h1>
+          <p class="portafolio-hero__descripcion">
+            Una selección de trabajos en diseño gráfico, multimedia y más.
+          </p>
+        </div>
+        <!-- Botones de navegación hacia tus especialidades -->
+         <div class="filtros" role="navigation" aria-label="Ir a proyectos por especialidad">
+          <a href="#proyectos" class="btn-filtro btn-filtro--activo">Destacados</a>
+          <a href="ilustrator.html" class="btn-filtro">Illustrator</a>
+          <a href="indesing.html" class="btn-filtro">InDesign</a>
+          <a href="multimedia.html" class="btn-filtro">Multimedia</a>
+         </div>
+      </div>
+    </section>
+
+    <!-- ==================== GRID DE PROYECTOS ==================== -->
+    <section id="proyectos" class="seccion galeria">
+      <div class="container">
+        <div class="proyectos-grid">
+
+          <!-- Proyecto 01: Enlace a PDF + Imagen de vista previa -->
+          <article class="proyecto-card">
+            <a href="docs/manual_caliz.pdf" target="_blank" rel="noopener noreferrer" class="proyecto-card__enlace">
+              <div class="marco-imagen marco-imagen--proyecto">
+                <span class="marco-imagen__numero">01</span>
+                <img
+                  src="imagenes/portada_caliz_Mesa de trabajo 1.png"
+                  alt="Vista previa del proyecto de identidad visual"
+                  class="marco-imagen__proyecto-img"
+                >
+              </div>
+              <h2 class="proyecto-card__titulo">
+                Identidad visual <span class="flecha flecha--diagonal">↗</span>
+              </h2>
+              <p class="proyecto-card__meta">Diseño gráfico · Illustrator</p>
+            </a>
+          </article>
+
+          <!-- Proyecto 02: Enlace a PDF + Imagen de vista previa -->
+          <article class="proyecto-card">
+            <a href="imagenes/poses_personajes.jpg" target="_blank" rel="noopener noreferrer" class="proyecto-card__enlace">
+              <div class="marco-imagen marco-imagen--proyecto">
+                <span class="marco-imagen__numero">02</span>
+                <img
+                  src="imagenes/portada_personaje.jpg"
+                  alt="Vista previa del proyecto de ilustración y personajes"
+                  class="marco-imagen__proyecto-img"
+                >
+              </div>
+              <h2 class="proyecto-card__titulo">
+                Ilustración y personajes <span class="flecha flecha--diagonal">↗</span>
+              </h2>
+              <p class="proyecto-card__meta">Ilustración · Krita</p>
+            </a>
+          </article>
+
+          <!-- Proyecto 03: Enlace a PDF + Imagen de vista previa -->
+          <article class="proyecto-card">
+            <a href="docs/poster de las drogas.pdf" target="_blank" rel="noopener noreferrer" class="proyecto-card__enlace">
+              <div class="marco-imagen marco-imagen--proyecto">
+                <span class="marco-imagen__numero">03</span>
+                <img
+                  src="imagenes/portada_drogas.png"
+                  alt="Vista previa del proyecto de diseño de publicación"
+                  class="marco-imagen__proyecto-img"
+                >
+              </div>
+              <h2 class="proyecto-card__titulo">
+                Diseño de publicación <span class="flecha flecha--diagonal">↗</span>
+              </h2>
+              <p class="proyecto-card__meta">Editorial · InDesign</p>
+            </a>
+          </article>
+
+          <!-- Proyecto 04: Enlace a PDF + Imagen de vista previa -->
+      
+        <article class="proyecto-card proyecto-card--video">
+          <div class="marco-imagen marco-imagen--proyecto marco-video--portada" onclick="reproducirConPortada(this)">
+            <span class="marco-imagen__numero">04</span>
+            <span class="marco-video__play" aria-hidden="true">▶</span>
+            <video
+              class="marco-imagen__video"
+              src="videos/el-pacto-de-las-sombras_qxwjCJXN.mp4"
+              poster="imagenes/El pacto de las sombras.png"
+              preload="none"
+              playsinline
+            >
+              Tu navegador no soporta la reproducción de video.
+            </video>
+          </div>
+          <a href="videos/el-pacto-de-las-sombras_qxwjCJXN.mp4" target="_blank" rel="noopener noreferrer" class="proyecto-card__enlace">
+            <h2 class="proyecto-card__titulo">
+              Producción audiovisual <span class="flecha flecha--diagonal">↗</span>
+            </h2>
+            <p class="proyecto-card__meta">Video · Multimedia</p>
+          </a>
+        </article>
+
+        </div>
+
+        <p class="galeria__nota">
+          04 proyectos · Títulos e imágenes de muestra para definir la estructura.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== EXPLORA POR ESPECIALIDAD ==================== -->
+    <section id="especialidades" class="seccion especialidades">
+      <div class="container">
+        <h2 class="titulo-seccion especialidades__titulo">Explora por especialidad</h2>
+
+        <div class="especialidades-grid">
+          <article class="especialidad-card especialidad-card--ai">
+            <span class="especialidad-card__numero">01</span>
+            <h3 class="especialidad-card__titulo">
+              <span class="color-illustrator">Illustrator</span> <span class="flecha flecha--diagonal">↗</span>
+            </h3>
+            <p class="especialidad-card__desc">
+              Logotipos, ilustraciones y recursos gráficos con identidad.
+            </p>
+            <a href="ilustrator.html" class="btn btn--especialidad">Ver proyectos</a>
+          </article>
+
+          <article class="especialidad-card especialidad-card--id">
+            <span class="especialidad-card__numero">02</span>
+            <h3 class="especialidad-card__titulo">
+              <span class="color-indesign">InDesign</span> <span class="flecha flecha--diagonal">↗</span>
+            </h3>
+            <p class="especialidad-card__desc">
+              Editorial, diagramación y contenido con propósito.
+            </p>
+            <a href="indesing.html" class="btn btn--especialidad">Ver proyectos</a>
+          </article>
+
+          <article class="especialidad-card especialidad-card--pr">
+            <span class="especialidad-card__numero">03</span>
+            <h3 class="especialidad-card__titulo">
+              <span class="color-multimedia">Multimedia</span> <span class="flecha flecha--diagonal">↗</span>
+            </h3>
+            <p class="especialidad-card__desc">
+              Animación, motion graphics, edición y contenido audiovisual.
+            </p>
+            <a href="multimedia.html" class="btn btn--especialidad">Ver proyectos</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== LLAMADO A LA ACCIÓN (CTA) ==================== -->
+    <section class="seccion cta">
+      <div class="container cta__contenido">
+        <div class="cta__texto-grupo">
+          <h2 class="cta__titulo">Tu próxima idea empieza aquí.</h2>
+          <p class="cta__subtitulo">Hablemos de diseño, imagen y nuevas posibilidades.</p>
+        </div>
+
+        <a href="index.html#contacto" class="btn btn--primario">
+          Contactar a Israel <span class="flecha flecha--diagonal">↗</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer__contenido">
+      <p class="footer__firma">
+        <strong>ISRAEL GUANCHA</strong> · Diseño y comunicación visual
+      </p>
+
+         <a href="https://www.behance.net/anubcripdeid" class="footer__enlace" target="_blank" rel="noopener noreferrer">
+         Behance <span class="flecha flecha--diagonal">↗</span>
+         </a>
+         <a href="https://www.instagram.com/_isrx_g7/" class="footer__enlace" target="_blank" rel="noopener noreferrer">
+         Instagram <span class="flecha flecha--diagonal">↗</span>
+         </a>
+        <a href="#top" class="footer__enlace">
+          Volver arriba <span class="flecha flecha--arriba">↑</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

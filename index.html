@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Israel Guancha · Portafolio de Diseño</title>
+  <!-- Tipografía limpia estilo editorial -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body id="top">
+
+  <!-- ==================== HEADER / NAVEGACIÓN ==================== -->
+  <header class="header">
+    <div class="container header__contenido">
+      <a href="#inicio" class="marca">
+        <!-- Espacio reservado para insertar tu logo -->
+        <div class="marca__logo-contenedor">
+          <img src="imagenes/logo_israel.png" alt="Logo Israel Guancha" class="marca__logo-img">
+        </div>
+        <span class="marca__nombre">ISRAEL GUANCHA</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <ul class="nav__lista">
+          <li class="nav__item">
+            <a href="#inicio" class="nav__enlace nav__enlace--activo">Inicio</a>
+          </li>
+          <li class="nav__item">
+            <a href="portafolio.html" class="nav__enlace">Portafolio</a>
+          </li>
+          <li class="nav__item">
+            <a href="#sobre-mi" class="nav__enlace">Sobre mí</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contacto" class="nav__enlace">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ==================== SECCIÓN HERO / INICIO ==================== -->
+    <section id="inicio" class="seccion hero">
+      <div class="container hero__grid">
+        <div class="hero__info">
+          <p class="etiqueta">HOLA, SOY.</p>
+          <h1 class="hero__titulo">
+            ISRAEL<br>
+            GUANCHA.
+          </h1>
+          <p class="hero__rol">Diseñador creativo · Multimedia · Audiovisual</p>
+          <p class="hero__descripcion">
+            Transformo ideas en experiencias visuales que inspiran.
+          </p>
+
+          <div class="hero__acciones">
+            <a href="portafolio.html" class="btn btn--primario">
+              Explora mi trabajo <span class="flecha flecha--diagonal">↗</span>
+            </a>
+            <a href="#sobre-mi" class="btn btn--secundario">
+              Sobre mí <span class="flecha flecha--abajo">↓</span>
+            </a>
+          </div>
+
+          <p class="hero__disciplinas">
+            Diseño gráfico / Editorial / Producción audiovisual
+          </p>
+        </div>
+
+        <div class="hero__visual">
+          <div class="marco-imagen marco-imagen--retrato">
+            <div class="hero__visual">
+            <div class="marco-imagen marco-imagen--retrato">
+            <img src="imagenes/retrato.png" alt="Retrato de Israel Guancha" class="marco-imagen__foto">
+            </div>
+        </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECCIÓN PORTAFOLIO ==================== -->
+    <section id="portafolio" class="seccion portafolio">
+      <div class="container">
+        <div class="portafolio__cabecera">
+          <h2 class="titulo-seccion">Una selección de mi trabajo</h2>
+          <a href="portafolio.html" class="enlace-flecha">
+            Ver todo el portafolio <span class="flecha flecha--diagonal">↗</span>
+          </a>
+        </div>
+
+        <!-- Tarjetas destacadas -->
+        
+<div class="proyectos-grid">
+  <!-- Tarjeta 01: Manual (abre el PDF al hacer clic) -->
+  <article class="proyecto-card">
+    <a href="docs/portafolio_raiden.pdf" target="_blank" rel="noopener noreferrer" class="proyecto-card__enlace">
+      <div class="marco-imagen marco-imagen--proyecto">
+        <span class="marco-imagen__numero">01</span>
+        <img
+          src="imagenes/portafolio_raiden_Mesa de trabajo 1.png"
+          alt="Vista previa del manual de identidad visual"
+          class="marco-imagen__proyecto-img"
+        >
+      </div>
+      <h3 class="proyecto-card__titulo">Agencia de Marketing</h3>
+      <p class="proyecto-card__meta">Diseño gráfico · Illustrator · Ver manual (PDF) ↗</p>
+    </a>
+  </article>
+
+  <!-- Tarjeta 02: Portada de videojuego (abre la imagen completa al hacer clic) -->
+  <article class="proyecto-card">
+    <a href="docs/manual_caliz.pdf" target="_blank" rel="noopener noreferrer" class="proyecto-card__enlace">
+      <div class="marco-imagen marco-imagen--proyecto">
+        <span class="marco-imagen__numero">02</span>
+        <img
+          src="imagenes/portada_caliz_Mesa de trabajo 1.png"
+          alt="Vista Previa del manual de cáliz"
+          class="marco-imagen__proyecto-img"
+        >
+      </div>
+      <h3 class="proyecto-card__titulo">Manual de Marca "Cáliz"</h3>
+      <p class="proyecto-card__meta">Diseño gráfico · Illustrator · Ver manual (PDF) ↗</p>
+    </a>
+  </article>
+</div>
+
+        <!-- Categorías inferiores -->
+<div class="categorias-grid">
+  <a href="ilustrator.html" class="categoria-item categoria-item--ai">
+    <h3 class="categoria-item__titulo">
+      01 / <span class="color-illustrator">Illustrator</span> <span class="flecha flecha--diagonal">↗</span>
+    </h3>
+    <p class="categoria-item__desc">Identidad, ilustración y recursos gráficos</p>
+  </a>
+
+  <a href="indesing.html" class="categoria-item categoria-item--id">
+    <h3 class="categoria-item__titulo">
+      02 / <span class="color-indesign">InDesign</span> <span class="flecha flecha--diagonal">↗</span>
+    </h3>
+    <p class="categoria-item__desc">Editorial, diagramación y publicaciones</p>
+  </a>
+
+  <a href="multimedia.html" class="categoria-item categoria-item--pr">
+    <h3 class="categoria-item__titulo">
+      03 / <span class="color-multimedia">Multimedia</span> <span class="flecha flecha--diagonal">↗</span>
+    </h3>
+    <p class="categoria-item__desc">Animación, edición y producción audiovisual</p>
+  </a>
+</div>
+    </section>
+
+    <!-- ==================== SECCIÓN SOBRE MÍ ==================== -->
+    <section id="sobre-mi" class="seccion sobre-mi">
+      <div class="container sobre-mi__grid">
+        <div class="sobre-mi__izq">
+          <p class="etiqueta">SOBRE MÍ</p>
+          <h2 class="sobre-mi__titulo">
+            Ideas con intención.<br>
+            Diseño con propósito.
+          </h2>
+        </div>
+
+        <div class="sobre-mi__der">
+          <p class="sobre-mi__destacado">
+            Soy Israel Guancha, diseñador creativo especializado en diseño gráfico, multimedia y producción audiovisual.
+          </p>
+          <p class="sobre-mi__texto">
+            Conecto concepto, imagen y narrativa para dar forma a proyectos de identidad, publicaciones y contenido audiovisual.
+          </p>
+          <p class="sobre-mi__etiquetas">
+            <span>Diseño gráfico</span>
+            <span class="separador">/</span>
+            <span>Dirección creativa</span>
+            <span class="separador">/</span>
+            <span>Narrativa visual</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECCIÓN CONTACTO ==================== -->
+    <section id="contacto" class="seccion contacto">
+      <div class="container contacto__grid">
+        <div class="contacto__info">
+          <p class="etiqueta">CONTACTO</p>
+          <h2 class="contacto__titulo">
+            ¿Creamos algo<br>
+            juntos?
+          </h2>
+          <p class="contacto__texto">
+            Cuéntame tu idea y conversemos sobre tu próximo proyecto.
+          </p>
+        </div>
+
+        <div class="contacto__formulario-contenedor">
+          <form class="formulario" action="#" method="post">
+            <div class="formulario__grupo">
+              <label for="nombre" class="formulario__label">Nombre</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                class="formulario__input"
+                placeholder="Tu nombre"
+                required
+              >
+            </div>
+
+            <div class="formulario__grupo">
+              <label for="correo" class="formulario__label">Correo electrónico</label>
+              <input
+                type="email"
+                id="correo"
+                name="correo"
+                class="formulario__input"
+                placeholder="tu@correo.com"
+                required
+              >
+            </div>
+
+            <div class="formulario__grupo">
+              <label for="mensaje" class="formulario__label">Mensaje</label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                class="formulario__input formulario__textarea"
+                placeholder="Cuéntame sobre tu proyecto"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--enviar">
+              Enviar mensaje <span class="flecha flecha--diagonal">↗</span>
+            </button>
+
+            <p class="formulario__nota">Datos de contacto y enlaces por completar.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer__contenido">
+      <p class="footer__firma">
+        <strong>ISRAEL GUANCHA</strong> · Diseño y comunicación visual
+      </p>
+
+      <div class="footer__enlaces">
+         <a href="https://www.behance.net/anubcripdeid" class="footer__enlace" target="_blank" rel="noopener noreferrer">
+         Behance <span class="flecha flecha--diagonal">↗</span>
+         </a>
+         <a href="https://www.instagram.com/_isrx_g7/" class="footer__enlace" target="_blank" rel="noopener noreferrer">
+         Instagram <span class="flecha flecha--diagonal">↗</span>
+         </a>
+        <a href="#top" class="footer__enlace">
+          Volver arriba <span class="flecha flecha--arriba">↑</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

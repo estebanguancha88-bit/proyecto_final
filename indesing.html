@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diseños en InDesign · Israel Guancha</title>
+  <!-- Tipografía limpia estilo editorial -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Hoja de estilos de la página InDesign -->
+  <link rel="stylesheet" href="indesing.css">
+</head>
+<body id="top">
+
+  <!-- ==================== HEADER / NAVEGACIÓN ==================== -->
+  <header class="header">
+    <div class="container header__contenido">
+      <a href="index.html" class="marca">
+        <!-- Espacio reservado para insertar tu logo -->
+        <div class="marca__logo-contenedor">
+          <img src="imagenes/logo_israel.png" alt="Logo Israel Guancha" class="marca__logo-img">
+        </div>
+        <span class="marca__nombre">ISRAEL GUANCHA</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <ul class="nav__lista">
+          <li class="nav__item">
+            <a href="index.html" class="nav__enlace">Inicio</a>
+          </li>
+          <li class="nav__item">
+            <a href="portafolio.html" class="nav__enlace nav__enlace--activo">Portafolio</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#sobre-mi" class="nav__enlace">Sobre mí</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#contacto" class="nav__enlace">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== RUTA / MIGAS DE PAN ==================== -->
+  <nav class="breadcrumb" aria-label="Ruta de navegación">
+    <div class="container">
+      <ol class="breadcrumb__lista">
+        <li class="breadcrumb__item">
+          <a href="index.html" class="breadcrumb__enlace">Inicio</a>
+        </li>
+        <li class="breadcrumb__separador" aria-hidden="true">/</li>
+        <li class="breadcrumb__item">
+          <a href="portafolio.html" class="breadcrumb__enlace">Portafolio</a>
+        </li>
+        <li class="breadcrumb__separador" aria-hidden="true">/</li>
+        <li class="breadcrumb__item breadcrumb__item--actual" aria-current="page">
+          InDesign
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ==================== HERO DE ESPECIALIDAD ==================== -->
+    <section class="seccion especialidad-hero">
+      <div class="container especialidad-hero__grid">
+        <div class="especialidad-hero__info">
+          <p class="etiqueta">02 / ESPECIALIDAD</p>
+          <h1 class="especialidad-hero__titulo">
+            Diseños en<br>
+            InDesign
+          </h1>
+          <p class="especialidad-hero__descripcion">
+            Editorial, diagramación y contenido con propósito.
+          </p>
+
+          <a href="#proyectos-indesign" class="btn btn--secundario">
+            Ver proyectos <span class="flecha flecha--abajo">↓</span>
+          </a>
+        </div>
+
+        <div class="especialidad-hero__visual">
+          <div class="marco-imagen marco-imagen--especialidad">
+          <video
+          class="marco-imagen__video"
+          src="videos/motion_editorial.mp4"
+          autoplay
+          loop
+          muted
+          playsinline
+          controls
+          ></video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROYECTOS DE INDESIGN ==================== -->
+    <section id="proyectos-indesign" class="seccion proyectos-id">
+      <div class="container">
+        <div class="proyectos-id__cabecera">
+          <h2 class="titulo-seccion">Proyectos de InDesign</h2>
+          <span class="proyectos-id__contador">03 / PROYECTOS DE MUESTRA</span>
+        </div>
+
+        <div class="proyectos-grid">
+
+          <!-- Proyecto 01: Enlace a PDF + Portada vertical -->
+          <article class="proyecto-card">
+            <a href="docs/Portada_VOGUE.pdf" target="_blank" rel="noopener noreferrer" class="proyecto-card__enlace">
+              <div class="marco-imagen marco-imagen--editorial">
+                <span class="marco-imagen__numero">01</span>
+                <img
+                  src="imagenes/Portada_VOGUE.png"
+                  alt="Portada o doble página de diseño de revista"
+                  class="marco-imagen__img"
+                >
+              </div>
+              <h3 class="proyecto-card__titulo">
+                Diseño de revista <span class="flecha flecha--diagonal">↗</span>
+              </h3>
+              <p class="proyecto-card__meta">Revista · Maquetación</p>
+            </a>
+          </article>
+
+          <!-- Proyecto 02: Enlace a PDF + Portada vertical -->
+          <article class="proyecto-card">
+            <a href="docs/poster de las drogas.pdf" target="_blank" rel="noopener noreferrer" class="proyecto-card__enlace">
+              <div class="marco-imagen marco-imagen--editorial">
+                <span class="marco-imagen__numero">02</span>
+                <img
+                  src="imagenes/poster_drogas.jpg"
+                  alt="Portada o doble página de publicación editorial"
+                  class="marco-imagen__img"
+                >
+              </div>
+              <h3 class="proyecto-card__titulo">
+                Publicación editorial <span class="flecha flecha--diagonal">↗</span>
+              </h3>
+              <p class="proyecto-card__meta">Libro · Diseño editorial</p>
+            </a>
+          </article>
+
+          <!-- Proyecto 03: Enlace a PDF + Portada vertical -->
+          <article class="proyecto-card">
+            <a href="docs/juego_interactivo.pdf" target="_blank" rel="noopener noreferrer" class="proyecto-card__enlace">
+              <div class="marco-imagen marco-imagen--editorial">
+                <span class="marco-imagen__numero">03</span>
+                <img
+                  src="imagenes/juego_interactivo-01.png"
+                  alt="Portada o doble página de catálogo y diagramación"
+                  class="marco-imagen__img"
+                >
+              </div>
+              <h3 class="proyecto-card__titulo">
+                Videojuego Interactivo <span class="flecha flecha--diagonal">↗</span>
+              </h3>
+              <p class="proyecto-card__meta"> Videojuego · Maquetación</p>
+            </a>
+          </article>
+
+        </div>
+
+        <p class="proyectos-id__nota">
+          Proyectos de muestra · Sustituir por trabajos reales en la siguiente etapa.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== PROCESO EDITORIAL ==================== -->
+    <section class="seccion proceso">
+      <div class="container">
+        <p class="etiqueta">DEL CONCEPTO AL RESULTADO</p>
+        <h2 class="titulo-seccion proceso__titulo">
+          Historias que encuentran su forma en cada página.
+        </h2>
+
+        <div class="proceso-grid">
+          <article class="proceso-item">
+            <h3 class="proceso-item__titulo">01 / Contenido</h3>
+            <p class="proceso-item__desc">
+              Organizar el texto y definir la estructura editorial.
+            </p>
+          </article>
+
+          <article class="proceso-item">
+            <h3 class="proceso-item__titulo">02 / Retícula</h3>
+            <p class="proceso-item__desc">
+              Construir jerarquías, ritmos y recorridos de lectura.
+            </p>
+          </article>
+
+          <article class="proceso-item">
+            <h3 class="proceso-item__titulo">03 / Publicación</h3>
+            <p class="proceso-item__desc">
+              Ajustar detalles y preparar la entrega final.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== LLAMADO A LA ACCIÓN (CTA) ==================== -->
+    <section class="seccion cta">
+      <div class="container cta__contenido">
+        <div class="cta__texto-grupo">
+          <h2 class="cta__titulo">¿Tienes un proyecto en mente?</h2>
+          <p class="cta__subtitulo">Conversemos y demos forma a tu próxima idea.</p>
+        </div>
+
+        <a href="index.html#contacto" class="btn btn--cta">
+          Hablemos <span class="flecha flecha--diagonal">↗</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer__contenido">
+      <p class="footer__firma">
+        <strong>ISRAEL GUANCHA</strong> · Diseño y comunicación visual
+      </p>
+
+      <div class="footer__enlaces">
+        <a href="https://www.behance.net/anubcripdeid" class="footer__enlace" target="_blank" rel="noopener noreferrer">
+         Behance <span class="flecha flecha--diagonal">↗</span>
+         </a>
+         <a href="https://www.instagram.com/_isrx_g7/" class="footer__enlace" target="_blank" rel="noopener noreferrer">
+         Instagram <span class="flecha flecha--diagonal">↗</span>
+         </a>
+        <a href="#top" class="footer__enlace">
+          Volver arriba <span class="flecha flecha--arriba">↑</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

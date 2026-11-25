@@ -1,0 +1,647 @@
+/* ==================== VARIABLES Y RESET ==================== */
+:root {
+  --bg-negro: #000000;
+  --bg-hero: #111111;
+  --bg-galeria: #050505;
+  --bg-especialidades: #1f1f1f;
+  --bg-cta: #141414;
+  --bg-placeholder: #3d3d3d;
+  --bg-btn-activo: #202020;
+
+  --texto-principal: #ffffff;
+  --texto-secundario: #c7c7c7;
+  --texto-tenue: #9a9a9a;
+
+  --borde-seccion: rgba(255, 255, 255, 0.35);
+  --borde-suave: rgba(255, 255, 255, 0.25);
+  --borde-input: rgba(255, 255, 255, 0.55);
+
+  /* Colores oficiales de Adobe (solo aplicados a las palabras de especialidad) */
+  --color-illustrator: #FF9A00;
+  --color-indesign: #FF3366;
+  --color-premiere: #9999FF;
+
+  --transicion: 0.25s ease;
+  --ancho-maximo: 1200px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-negro);
+  color: var(--texto-principal);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ==================== UTILIDADES GENERALES ==================== */
+.container {
+  width: 90%;
+  max-width: var(--ancho-maximo);
+  margin: 0 auto;
+}
+
+.seccion {
+  border-bottom: 1px solid var(--borde-seccion);
+}
+
+.etiqueta {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--texto-secundario);
+  margin-bottom: 1.25rem;
+}
+
+.titulo-seccion {
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.flecha {
+  display: inline-block;
+  margin-left: 0.25rem;
+  transition: transform var(--transicion), color var(--transicion);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--texto-principal);
+  outline-offset: 3px;
+}
+
+/* ==================== HEADER ==================== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--bg-negro);
+  border-bottom: 1px solid var(--borde-seccion);
+}
+
+.header__contenido {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 76px;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.marca__logo-contenedor {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--texto-principal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 4px;
+  transition: transform var(--transicion), background-color var(--transicion);
+}
+
+.marca__logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  font-size: 0.6rem;
+  color: var(--texto-tenue);
+  text-align: center;
+}
+
+.marca__nombre {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  transition: opacity var(--transicion);
+}
+
+.marca:hover .marca__logo-contenedor {
+  transform: scale(1.06);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.marca:hover .marca__nombre {
+  opacity: 0.8;
+}
+
+.nav__lista {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+}
+
+.nav__enlace {
+  position: relative;
+  font-size: 0.85rem;
+  color: var(--texto-secundario);
+  padding-bottom: 4px;
+  transition: color var(--transicion);
+}
+
+.nav__enlace::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--texto-principal);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transicion);
+}
+
+.nav__enlace--activo {
+  color: var(--texto-principal);
+  font-weight: 500;
+}
+
+.nav__enlace--activo::after {
+  transform: scaleX(1);
+}
+
+.nav__enlace:not(.nav__enlace--activo):hover {
+  color: var(--texto-principal);
+}
+
+.nav__enlace:not(.nav__enlace--activo):hover::after {
+  transform: scaleX(1);
+}
+
+/* ==================== CABECERA PORTAFOLIO ==================== */
+.portafolio-hero {
+  background-color: var(--bg-hero);
+  padding: 4.5rem 0 3.75rem;
+}
+
+.portafolio-hero__grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.portafolio-hero__titulo {
+  font-size: clamp(2.8rem, 5.5vw, 4.35rem);
+  font-weight: 700;
+  line-height: 1.06;
+  letter-spacing: -0.025em;
+}
+
+.portafolio-hero__descripcion {
+  font-size: 1.15rem;
+  color: var(--texto-secundario);
+  max-width: 420px;
+  line-height: 1.45;
+}
+
+/* Botones de filtro */
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.btn-filtro {
+  padding: 0.7rem 1.35rem;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--texto-principal);
+  background-color: transparent;
+  border: 1px solid var(--borde-input);
+  cursor: pointer;
+  transition: background-color var(--transicion),
+              color var(--transicion),
+              border-color var(--transicion),
+              transform 0.15s ease;
+}
+
+.btn-filtro--activo {
+  background-color: var(--bg-btn-activo);
+  border-color: var(--texto-principal);
+}
+
+.btn-filtro:hover {
+  background-color: var(--texto-principal);
+  color: var(--bg-negro);
+  border-color: var(--texto-principal);
+}
+
+.btn-filtro:active {
+  transform: scale(0.97);
+}
+
+/* ==================== GALERÍA DE PROYECTOS ==================== */
+.galeria {
+  background-color: var(--bg-galeria);
+  padding: 4.5rem 0 4rem;
+}
+
+.proyectos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2.25rem;
+  row-gap: 3rem;
+  margin-bottom: 2.75rem;
+}
+
+.proyecto-card__enlace {
+  display: block;
+}
+
+.marco-imagen--proyecto {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background-color: var(--bg-placeholder);
+  overflow: hidden;
+  border: 1px solid transparent;
+  margin-bottom: 1.1rem;
+  transition: border-color var(--transicion), transform var(--transicion);
+}
+
+.marco-imagen__numero {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--texto-principal);
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 0.25rem 0.5rem;
+}
+
+.marco-imagen__proyecto-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+/* Clase opcional si alguna portada vertical no debe recortarse */
+.marco-imagen__proyecto-img--completa {
+  object-fit: contain;
+  background-color: #141414;
+}
+
+.proyecto-card__titulo {
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  transition: color var(--transicion);
+}
+
+.proyecto-card__meta {
+  font-size: 0.8rem;
+  color: var(--texto-tenue);
+}
+
+/* Pseudoclases interactivas en tarjetas */
+.proyecto-card__enlace:hover .marco-imagen--proyecto {
+  border-color: var(--texto-principal);
+  transform: translateY(-4px);
+}
+
+.proyecto-card__enlace:hover .marco-imagen__proyecto-img {
+  transform: scale(1.04);
+}
+
+.proyecto-card__enlace:hover .proyecto-card__titulo {
+  color: var(--texto-secundario);
+}
+
+.proyecto-card__enlace:hover .flecha--diagonal {
+  transform: translate(3px, -3px);
+}
+.marco-video--portada {
+  cursor: pointer;
+  background-color: #0e0e0e;
+}
+
+.marco-video--portada .marco-imagen__numero {
+  pointer-events: none;
+}
+
+.marco-imagen__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  background-color: #000000;
+}
+
+.marco-video__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: 1px solid var(--texto-principal);
+  background-color: rgba(0, 0, 0, 0.65);
+  color: var(--texto-principal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  padding-left: 3px;
+  pointer-events: none;
+  transition: background-color var(--transicion),
+              border-color var(--transicion),
+              color var(--transicion),
+              transform var(--transicion);
+}
+
+.proyecto-card--video:hover .marco-video--portada {
+  border-color: var(--color-premiere);
+  transform: translateY(-4px);
+}
+
+.proyecto-card--video:hover .marco-video__play {
+  background-color: var(--color-premiere);
+  border-color: var(--color-premiere);
+  color: var(--bg-negro);
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.marco-video--activo {
+  cursor: default;
+}
+
+.marco-video--activo .marco-video__play {
+  display: none;
+}
+
+.galeria__nota {
+  font-size: 0.75rem;
+  color: var(--texto-tenue);
+}
+
+/* ==================== EXPLORA POR ESPECIALIDAD ==================== */
+.especialidades {
+  background-color: var(--bg-especialidades);
+  padding: 5.25rem 0;
+}
+
+.especialidades__titulo {
+  margin-bottom: 2.75rem;
+}
+
+.especialidades-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.especialidad-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.especialidad-card__numero {
+  font-size: 0.72rem;
+  color: var(--texto-tenue);
+  margin-bottom: 0.85rem;
+}
+
+.especialidad-card__titulo {
+  font-size: 1.55rem;
+  font-weight: 600;
+  margin-bottom: 0.85rem;
+  color: var(--texto-principal);
+}
+
+/* Solo las palabras Illustrator, InDesign y Multimedia llevan los colores Adobe */
+.color-illustrator {
+  color: var(--color-illustrator);
+  transition: filter var(--transicion);
+}
+
+.color-indesign {
+  color: var(--color-indesign);
+  transition: filter var(--transicion);
+}
+
+.color-multimedia {
+  color: var(--color-premiere);
+  transition: filter var(--transicion);
+}
+
+.especialidad-card__desc {
+  font-size: 0.9rem;
+  color: var(--texto-secundario);
+  line-height: 1.5;
+  margin-bottom: 1.6rem;
+  max-width: 310px;
+}
+
+/* ==================== BOTONES ==================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.8rem 1.4rem;
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--texto-principal);
+  border: 1px solid var(--borde-input);
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color var(--transicion),
+              color var(--transicion),
+              border-color var(--transicion),
+              transform 0.15s ease;
+}
+
+.btn--especialidad {
+  background-color: var(--bg-negro);
+  border-color: var(--borde-suave);
+  padding: 0.68rem 1.2rem;
+  font-size: 0.78rem;
+}
+
+.btn--primario {
+  background-color: var(--bg-btn-activo);
+}
+
+.btn:hover {
+  background-color: var(--texto-principal);
+  color: var(--bg-negro);
+  border-color: var(--texto-principal);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn:hover .flecha--diagonal {
+  transform: translate(3px, -3px);
+}
+
+/* Pseudoclases interactivas por especialidad */
+.especialidad-card:hover .flecha--diagonal {
+  transform: translate(3px, -3px);
+}
+
+.especialidad-card--ai:hover .color-illustrator,
+.especialidad-card--id:hover .color-indesign,
+.especialidad-card--pr:hover .color-multimedia {
+  filter: brightness(1.15);
+}
+
+.especialidad-card--ai .btn--especialidad:hover {
+  background-color: var(--color-illustrator);
+  border-color: var(--color-illustrator);
+  color: var(--bg-negro);
+}
+
+.especialidad-card--id .btn--especialidad:hover {
+  background-color: var(--color-indesign);
+  border-color: var(--color-indesign);
+  color: var(--texto-principal);
+}
+
+.especialidad-card--pr .btn--especialidad:hover {
+  background-color: var(--color-premiere);
+  border-color: var(--color-premiere);
+  color: var(--bg-negro);
+}
+
+/* ==================== SECCIÓN CTA ==================== */
+.cta {
+  background-color: var(--bg-cta);
+  padding: 4.5rem 0;
+}
+
+.cta__contenido {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.cta__titulo {
+  font-size: clamp(1.75rem, 3vw, 2.3rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.6rem;
+}
+
+.cta__subtitulo {
+  font-size: 0.95rem;
+  color: var(--texto-secundario);
+}
+
+/* ==================== FOOTER ==================== */
+.footer {
+  background-color: var(--bg-negro);
+  padding: 1.85rem 0;
+}
+
+.footer__contenido {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer__firma {
+  font-size: 0.78rem;
+  color: var(--texto-secundario);
+}
+
+.footer__firma strong {
+  color: var(--texto-principal);
+  font-weight: 600;
+}
+
+.footer__enlaces {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.footer__enlace {
+  font-size: 0.78rem;
+  color: var(--texto-secundario);
+  transition: color var(--transicion);
+}
+
+.footer__enlace:hover {
+  color: var(--texto-principal);
+}
+
+.footer__enlace:hover .flecha--diagonal {
+  transform: translate(3px, -3px);
+}
+
+.footer__enlace:hover .flecha--arriba {
+  transform: translateY(-3px);
+}
+
+/* ==================== DISEÑO RESPONSIVO ==================== */
+@media (max-width: 900px) {
+  .portafolio-hero__grid,
+  .proyectos-grid,
+  .especialidades-grid {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .header__contenido {
+    flex-direction: column;
+    padding: 1rem 0;
+    gap: 0.85rem;
+  }
+
+  .nav__lista {
+    gap: 1.25rem;
+  }
+
+  .cta__contenido {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
